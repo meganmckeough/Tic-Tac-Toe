@@ -99,6 +99,35 @@ footer {
 	margin-top: 100px;
 }
 
+.win-screen-netflix div {
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	background-color: #da1921;
+	font-size: 50px;
+	text-align: center;
+}
+
+.win-screen-stan div {
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	background-color: #0073ff;
+	font-size: 50px;
+	text-align: center;
+}
+
+.win-screen-stan img,
+.win-screen-netflix img {
+	width: 500px;
+	height: auto;
+}
+
+.hidden {
+	display: none;
+}
 
 
 

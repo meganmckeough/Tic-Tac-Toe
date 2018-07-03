@@ -10,6 +10,8 @@ var square6 = document.querySelector('.six');
 var square7 = document.querySelector('.seven');
 var square8 = document.querySelector('.eight');
 var square9 = document.querySelector('.nine');
+var winScreenNetflix = document.querySelector('.win-screen-netflix');
+var winScreenStan = document.querySelector('.win-screen-stan');
 
 //add function to randomly assign "your turn"
 
@@ -29,37 +31,33 @@ function chooseSquare () {
 //checking for one of eight win conditions
 function checkForWin () {
 	if (square1.classList.contains('chosenp1') && square2.classList.contains('chosenp1') && square3.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosenp2') && square2.classList.contains('chosenp2') && square3.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square4.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square6.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square4.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square6.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square7.classList.contains('chosenp1') && square8.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square7.classList.contains('chosenp2') && square8.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosenp1') && square4.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
-	} else if (square1.classList.contains('chosenp2') && square4.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
-		console.log('p2 win'); 
-	} else if (square2.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square8.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square2.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square8.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosenp1') && square6.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosenp2') && square6.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
-		console.log('p1 win');
+		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
-		console.log('p2 win');
+		winScreenStan.classList.remove('hidden');
 	}
 }
 
