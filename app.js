@@ -1,6 +1,11 @@
 var boardSquares = document.querySelectorAll('.square');
-var playerOne = document.querySelector('#p1');
-var playerTwo = document.querySelector('#p2');
+var playerNetflix = document.querySelector('#p1');
+var playerStan = document.querySelector('#p2');
+var winScreenNetflix = document.querySelector('.win-screen-netflix');
+var winScreenStan = document.querySelector('.win-screen-stan');
+var restart = document.querySelector('.restart');
+
+//targeting squares
 var square1 = document.querySelector('.one');
 var square2 = document.querySelector('.two');
 var square3 = document.querySelector('.three');
@@ -10,32 +15,62 @@ var square6 = document.querySelector('.six');
 var square7 = document.querySelector('.seven');
 var square8 = document.querySelector('.eight');
 var square9 = document.querySelector('.nine');
-var winScreenNetflix = document.querySelector('.win-screen-netflix');
-var winScreenStan = document.querySelector('.win-screen-stan');
-var restart = document.querySelector('.restart');
+
+//targeting square images
+var square1ImgStan = document.querySelector('.one img.stan');
+var square1ImgNetflix = document.querySelector('.one img.netflix');
+
+
+var square2Img = document.querySelector('.two');
+var square3Img = document.querySelector('.three');
+var square4Img = document.querySelector('.four');
+var square5Img = document.querySelector('.five');
+var square6Img = document.querySelector('.six');
+var square7Img = document.querySelector('.seven');
+var square8Img = document.querySelector('.eight');
+var square9Img = document.querySelector('.nine');
+
+
 
 //to randomly allocate one of the players 'your turn' - first turn
 function allocateFirstPlayer () {
 	var randomPlayer = Math.floor(Math.random() * Math.floor(2));
 	if (randomPlayer === 0) {
-		playerOne.classList.add('your-turn');
+		playerNetflix.classList.add('your-turn');
 	} else {
-		playerTwo.classList.add('your-turn');
+		playerStan.classList.add('your-turn');
 	}
 };
 
 allocateFirstPlayer();
 
+//to show the Netflix img on a chosen square
+function selectedNetflix () {
+	if (event.target === square1) {
+		square1.classList.add('chosenp1');
+		square1ImgNetflix.classList.remove('hidden');
+	}
+
+};
+
+//to show the Stan image on a chosen square
+function selectedStan () {
+	if (event.target === square1) {
+		square1.classList.add('chosenp2');
+		square1ImgStan.classList.remove('hidden');
+	} 
+};
+
 //to change class when square is clicked/chosen, then changing the turn to other player
 function chooseSquare () {
-	if (playerOne.classList.contains('your-turn') === true) {
-		event.target.classList.add('chosenp1');
-		playerTwo.classList.add('your-turn');	
-		playerOne.classList.remove('your-turn');
+	if (playerNetflix.classList.contains('your-turn') === true) {
+		selectedNetflix();
+		playerStan.classList.add('your-turn');	
+		playerNetflix.classList.remove('your-turn');
 	} else {
-		event.target.classList.add('chosenp2');
-		playerOne.classList.add('your-turn');
-		playerTwo.classList.remove('your-turn');
+		selectedStan();
+		playerNetflix.classList.add('your-turn');	
+		playerStan.classList.remove('your-turn');	
 	}
 	checkForWin();
 };
