@@ -4,19 +4,21 @@
 	<meta charset="UTF-8">
 	<title>Who Gets My Money?</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<h1>HEADING</h1>
+		<h1><a href="http://www.netflix.com" target="_blank"><img src="images/netflix.png" alt="Netflix logo"></a> vs <a href="http://www.stan.com.au" target="_blank"><img src="images/stan.png" alt="Stan logo"></a></h1>
+		<h2>A Tic Tac Toe Battle of the Streaming Services</h2>
 	</header>
 
-	<section>
-		<div><h2>Player 1</h2></div>
-		<div><h2>Player 2</h2></div>
+	<section class="player-headings">
+		<div><h2 class="netflix">Player 1: Netflix</h2></div>
+		<div><h2 class="stan">Player 2: Stan</h2></div>
 	</section>
 
 	<main>
-		<div id="p1" class="player your-turn"></div>
+		<div id="p1" class="player"></div>
 
 		<div class="game-board">
 			<div class="row">
@@ -36,11 +38,11 @@
 			</div>
 		</div>
 
-		<div id="p2" class="player"></div>
+		<div id="p2" class="player your-turn"></div>
 	</main>
 
 	<section>
-		<div class="restart"></div>
+		<div class="restart">Play again</div>
 	</section>
 
 	<footer>

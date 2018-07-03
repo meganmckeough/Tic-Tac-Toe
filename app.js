@@ -11,11 +11,13 @@ var square7 = document.querySelector('.seven');
 var square8 = document.querySelector('.eight');
 var square9 = document.querySelector('.nine');
 
+//add function to randomly assign "your turn"
+
 function chooseSquare () {
 	if (playerOne.classList.contains('your-turn') === true) {
 		event.target.classList.add('chosenp1');
 		playerTwo.classList.add('your-turn');	
-		playerOne.classList.remove('your-turn');	
+		playerOne.classList.remove('your-turn');
 	} else {
 		event.target.classList.add('chosenp2');
 		playerOne.classList.add('your-turn');
