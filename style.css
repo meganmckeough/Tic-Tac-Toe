@@ -34,7 +34,8 @@ header {
 	text-align: center;
 }
 
-header img {
+header img,
+.choose-service img {
 	width: 200px;
 	height: auto;
 	padding: 0 30px;
@@ -149,24 +150,30 @@ footer a:hover {
 	color: rgb(0, 115, 255);
 }
 
-.win-screen-netflix div {
-	height: 100vh;
-	width: 100%;
-	z-index: 1;
-	position: absolute;
-	background-color: rgba(218,25,33,.98);
-	font-size: 50px;
-	text-align: center;
-}
-
-.win-screen-stan div {
+.win-screen-netflix div, 
+.win-screen-stan div,
+.choose-service div {
 	height: 100%;
 	width: 100%;
 	z-index: 1;
 	position: absolute;
-	background-color: rgba(0, 115, 255,.98);
 	font-size: 50px;
 	text-align: center;
+}
+
+.win-screen-netflix div {
+	background-color: rgba(218,25,33,.98);
+}
+
+.win-screen-stan div {
+	background-color: rgba(0, 115, 255,.98);
+}
+
+.choose-service div {
+	background-color: white;
+	color: black;
+	font-weight: 800;
+	padding-top: 100px;
 }
 
 .win-screen-stan img,
@@ -191,6 +198,11 @@ footer a:hover {
 .draw p:hover {
 	border-bottom: 4px solid white;
 	font-size: 70px;
+}
+
+.choose-service img:hover {
+	width: 300px;
+	height: auto;
 }
 
 /*.draw p {

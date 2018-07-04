@@ -8,6 +8,8 @@ var restartNetflix = document.querySelector('.win-screen-netflix .restart p');
 var squareImages = document.querySelectorAll('.square img');
 var winsNetflixCounter = document.querySelector('.wins-netflix span');
 var winsStanCounter = document.querySelector('.wins-stan span');
+var selectService = document.querySelectorAll('.choose-service img');
+var selectScreen = document.querySelector('.choose-service');
 // var draw = document.querySelector('.draw');
 
 //targeting squares
@@ -46,6 +48,10 @@ var winsStan = 0;
 
 winsStanCounter.textContent = winsStan;
 winsNetflixCounter.textContent = winsNetflix;
+
+function startGame () {
+	selectScreen.classList.add('hidden');
+}
 
 //to randomly allocate one of the players 'your turn' - first turn
 function allocateFirstPlayer () {
@@ -248,6 +254,11 @@ function resetBoard () {
 //event listener for each square on board
 boardSquares.forEach(function(thisSquare) {
 	thisSquare.addEventListener('click', chooseSquare);
+});
+
+//event listener to start game
+selectService.forEach(function(thisSquare) {
+	thisSquare.addEventListener('click', startGame);
 });
 
 //event listeners for restart
