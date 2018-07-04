@@ -16,7 +16,7 @@ var square7 = document.querySelector('.seven');
 var square8 = document.querySelector('.eight');
 var square9 = document.querySelector('.nine');
 
-//targeting square images
+//targeting square images per player
 var square1ImgStan = document.querySelector('.one img.stan');
 var square1ImgNetflix = document.querySelector('.one img.netflix');
 var square2ImgStan = document.querySelector('.two img.stan');
@@ -46,7 +46,30 @@ function allocateFirstPlayer () {
 	}
 };
 
+function changePlayerHeader () {
+	// if (winScreenNetflix.classList.contains("hidden") && winScreenStan.classList.contains("hidden") === false) {
+	// 	document.querySelector('.player-headings > div > h2').style.fontSize = '40px';
+	// 	document.querySelector('.player-headings > div > h2').style.borderBottom = 'none';
+	// } else {
+		if (playerNetflix.classList.contains('your-turn') === true) {
+			document.querySelector('.netflix').style.fontSize = '60px';
+			document.querySelector('.netflix').style.borderBottom = '5px solid #da1921';
+		} else {
+			document.querySelector('.netflix').style.fontSize = '40px';
+			document.querySelector('.netflix').style.borderBottom = 'none';
+		} 
+		if (playerStan.classList.contains('your-turn') === true) {
+			document.querySelector('.stan').style.fontSize = '60px';
+			document.querySelector('.stan').style.borderBottom = '5px solid #0073ff';	
+		} else {
+			document.querySelector('.stan').style.fontSize = '40px';
+			document.querySelector('.stan').style.borderBottom = 'none';
+		};		
+	}	
+// }
+
 allocateFirstPlayer();
+changePlayerHeader();
 
 //to show the Netflix img on a chosen square
 function selectedNetflix () {
@@ -135,11 +158,13 @@ function chooseSquare () {
 		checkForWin();
 		playerStan.classList.add('your-turn');	
 		playerNetflix.classList.remove('your-turn');
+		changePlayerHeader();
 	} else {
 		selectedStan();
 		checkForWin();
 		playerNetflix.classList.add('your-turn');	
 		playerStan.classList.remove('your-turn');
+		changePlayerHeader();
 	}
 };
 
