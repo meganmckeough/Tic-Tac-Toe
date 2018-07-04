@@ -17,11 +17,13 @@ h2 {
 }
 
 .netflix {
-	color: #da1921;
+	color: rgb(218,25,33);
+	transition: all 0.3s linear;
 }
 
 .stan {
-	color: #0073ff;
+	color: rgb(0, 115, 255);
+	transition: all 0.3s linear;
 }
 
 main {
@@ -65,7 +67,7 @@ header img {
 	width: 33%;
 	background-image: url("images/static.jpeg");
 	border: 5px black solid;
-	border-radius: 10px;
+	border-radius: 20px;
 	display: flex;
 	align-items: center;
 }
@@ -83,21 +85,35 @@ footer {
 /* classes used in events */
 
 .chosen-netflix {
-	background-color: #da1921;
+	background-color: rgba(218,25,33,.80);
 	background-image: none;
 }
 
 .chosen-stan {
-	background-color: #0073ff;
+	background-color: rgba(0, 115, 255,.80);
 	background-image: none;
 }
 
-#netflix.your-turn {
-	background-color: #da1921;
+#player-netflix p,
+#player-stan p {
+	transition: all 0.2s linear;
+	color: black;
+	margin: 0 auto;
+	font-size: 60px;
+	font-weight: 800;
+	border-radius: 10px;
 }
 
-#stan.your-turn {
-	background-color: #0073ff;
+#player-netflix p {
+	text-align: right;
+}
+
+#player-netflix.your-turn p {
+	background-color: rgb(218,25,33);
+}
+
+#player-stan.your-turn p {
+	background-color: rgb(0, 115, 255);
 }
 
 .your-turn {

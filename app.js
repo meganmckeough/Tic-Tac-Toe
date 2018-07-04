@@ -1,12 +1,12 @@
 var boardSquares = document.querySelectorAll('.square');
-var playerNetflix = document.querySelector('#netflix');
-var playerStan = document.querySelector('#stan');
+var playerNetflix = document.querySelector('#player-netflix');
+var playerStan = document.querySelector('#player-stan');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
 var restartStan = document.querySelector('.win-screen-stan .restart p');
 var restartNetflix = document.querySelector('.win-screen-netflix .restart p');
 var squareImages = document.querySelectorAll('.square img');
-var draw = document.querySelector('.draw');
+// var draw = document.querySelector('.draw');
 
 //targeting squares
 var square1 = document.querySelector('.one');
