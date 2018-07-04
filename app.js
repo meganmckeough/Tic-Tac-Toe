@@ -20,7 +20,6 @@ var square9 = document.querySelector('.nine');
 var square1ImgStan = document.querySelector('.one img.stan');
 var square1ImgNetflix = document.querySelector('.one img.netflix');
 
-
 var square2Img = document.querySelector('.two');
 var square3Img = document.querySelector('.three');
 var square4Img = document.querySelector('.four');
@@ -47,21 +46,21 @@ allocateFirstPlayer();
 //to show the Netflix img on a chosen square
 function selectedNetflix () {
 	if (event.target === square1) {
-		square1.classList.add('chosenp1');
+		square1.classList.add('chosen-netflix');
 		square1ImgNetflix.classList.remove('hidden');
 	}
 
 };
 
-//to show the Stan image on a chosen square
+//to show the Stan img on a chosen square
 function selectedStan () {
 	if (event.target === square1) {
-		square1.classList.add('chosenp2');
+		square1.classList.add('chosen-stan');
 		square1ImgStan.classList.remove('hidden');
 	} 
 };
 
-//to change class when square is clicked/chosen, then changing the turn to other player
+//to claim square for player, then changing the turn to other player
 function chooseSquare () {
 	if (playerNetflix.classList.contains('your-turn') === true) {
 		selectedNetflix();
@@ -75,60 +74,60 @@ function chooseSquare () {
 	checkForWin();
 };
 
-//checking for one of eight win conditions
+//checking for one of eight win conditions, per player
 function checkForWin () {
-	if (square1.classList.contains('chosenp1') && square2.classList.contains('chosenp1') && square3.classList.contains('chosenp1') === true) {
+	if (square1.classList.contains('chosen-netflix') && square2.classList.contains('chosenp1') && square3.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square1.classList.contains('chosenp2') && square2.classList.contains('chosenp2') && square3.classList.contains('chosenp2') === true) {
+	} else if (square1.classList.contains('chosen-stan') && square2.classList.contains('chosenp2') && square3.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square4.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square6.classList.contains('chosenp1') === true) {
+	} else if (square4.classList.contains('chosen-netflix') && square5.classList.contains('chosenp1') && square6.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square4.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square6.classList.contains('chosenp2') === true) {
+	} else if (square4.classList.contains('chosen-stan') && square5.classList.contains('chosenp2') && square6.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square7.classList.contains('chosenp1') && square8.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
+	} else if (square7.classList.contains('chosen-netflix') && square8.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square7.classList.contains('chosenp2') && square8.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
+	} else if (square7.classList.contains('chosen-stan') && square8.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square1.classList.contains('chosenp1') && square4.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
+	} else if (square1.classList.contains('chosen-netflix') && square4.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square1.classList.contains('chosenp2') && square4.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
+	} else if (square1.classList.contains('chosen-stan') && square4.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square3.classList.contains('chosenp1') && square6.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
+	} else if (square3.classList.contains('chosen-netflix') && square6.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square3.classList.contains('chosenp2') && square6.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
+	} else if (square3.classList.contains('chosen-stan') && square6.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square1.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
+	} else if (square1.classList.contains('chosen-netflix') && square5.classList.contains('chosenp1') && square9.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square1.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
+	} else if (square1.classList.contains('chosen-stan') && square5.classList.contains('chosenp2') && square9.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square3.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
+	} else if (square3.classList.contains('chosen-netflix') && square5.classList.contains('chosenp1') && square7.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square3.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
+	} else if (square3.classList.contains('chosen-stan') && square5.classList.contains('chosenp2') && square7.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square2.classList.contains('chosenp1') && square5.classList.contains('chosenp1') && square8.classList.contains('chosenp1') === true) {
+	} else if (square2.classList.contains('chosen-netflix') && square5.classList.contains('chosenp1') && square8.classList.contains('chosenp1') === true) {
 		winScreenNetflix.classList.remove('hidden');
 		restart.classList.remove('hidden');
-	} else if (square2.classList.contains('chosenp2') && square5.classList.contains('chosenp2') && square8.classList.contains('chosenp2') === true) {
+	} else if (square2.classList.contains('chosen-stan') && square5.classList.contains('chosenp2') && square8.classList.contains('chosenp2') === true) {
 		winScreenStan.classList.remove('hidden');
 		restart.classList.remove('hidden');
 	}
 }
 
-//need to take a look at this function
+//need to take a look at this function 
 function resetBoard () {
 	if (winScreenNetflix.classList.contains('.hidden') === false) {
 		winScreenNetflix.classList.add('hidden');
@@ -142,12 +141,5 @@ boardSquares.forEach(function(thisSquare) {
 	thisSquare.addEventListener('click', chooseSquare);
 });
 
+//event listener for restart
 restart.addEventListener('click', resetBoard);
-
-//for targeting parent if I need to do that instead
-	// if (event.target.classList.contains('square') === false) {
-	// 	return;
-	// }
-
-
-	// var gameBoard = document.querySelectorAll('.game-board');
