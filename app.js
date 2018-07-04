@@ -6,6 +6,8 @@ var winScreenStan = document.querySelector('.win-screen-stan');
 var restartStan = document.querySelector('.win-screen-stan .restart p');
 var restartNetflix = document.querySelector('.win-screen-netflix .restart p');
 var squareImages = document.querySelectorAll('.square img');
+var winsNetflixCounter = document.querySelector('.wins-netflix span');
+var winsStanCounter = document.querySelector('.wins-stan span');
 // var draw = document.querySelector('.draw');
 
 //targeting squares
@@ -38,6 +40,12 @@ var square8ImgStan = document.querySelector('.eight img.stan');
 var square8ImgNetflix = document.querySelector('.eight img.netflix');
 var square9ImgStan = document.querySelector('.nine img.stan');
 var square9ImgNetflix = document.querySelector('.nine img.netflix');
+
+var winsNetflix = 0;
+var winsStan = 0;
+
+winsStanCounter.textContent = winsStan;
+winsNetflixCounter.textContent = winsNetflix;
 
 //to randomly allocate one of the players 'your turn' - first turn
 function allocateFirstPlayer () {
@@ -224,10 +232,16 @@ function resetBoard () {
 	if (winScreenStan.classList.contains('hidden') === false) {
 		winScreenStan.classList.add('hidden');
 		clearSquares();
+		winsStan++;
+		winsStanCounter.textContent = winsStan;
+		winsNetflixCounter.textContent = winsNetflix;
 	}
 	if (winScreenNetflix.classList.contains('hidden') === false) {
 		winScreenNetflix.classList.add('hidden');
 		clearSquares();
+		winsNetflix++
+		winsStanCounter.textContent = winsStan;
+		winsNetflixCounter.textContent = winsNetflix;
 	} 
 };
 

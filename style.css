@@ -108,6 +108,12 @@ footer {
 	text-align: right;
 }
 
+#player-netflix,
+#player-stan {
+	display: flex;
+	flex-direction: column;
+}
+
 #player-netflix.your-turn p {
 	background-color: rgb(218,25,33);
 }
@@ -116,8 +122,19 @@ footer {
 	background-color: rgb(0, 115, 255);
 }
 
-.your-turn {
-	margin-top: 100px;
+.wins-netflix, 
+.wins-stan {
+	font-size: 50px;
+	margin-bottom: 100px;
+}
+
+.wins-netflix {
+	color: rgb(218,25,33);
+	text-align: right;
+}
+
+.wins-stan {
+	color: rgb(0, 115, 255);
 }
 
 .win-screen-netflix div {
