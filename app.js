@@ -3,7 +3,8 @@ var playerNetflix = document.querySelector('#p1');
 var playerStan = document.querySelector('#p2');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
-var restart = document.querySelector('.restart p');
+var restartStan = document.querySelector('.win-screen-stan .restart p');
+var restartNetflix = document.querySelector('.win-screen-netflix .restart p');
 var squareImages = document.querySelectorAll('.square img');
 
 //targeting squares
@@ -239,4 +240,5 @@ boardSquares.forEach(function(thisSquare) {
 });
 
 //event listener for restart
-restart.addEventListener('click', resetBoard);
+restartStan.addEventListener('click', resetBoard);
+restartNetflix.addEventListener('click', resetBoard);
