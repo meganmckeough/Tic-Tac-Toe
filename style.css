@@ -80,11 +80,6 @@ footer {
 	font-size: 20px;
 }
 
-.restart {
-	font-size: 40px;
-	text-align: center;
-}
-
 /* classes used in events */
 
 .chosen-netflix {
@@ -110,11 +105,11 @@ footer {
 }
 
 .win-screen-netflix div {
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	z-index: 1;
 	position: absolute;
-	background-color: rgba(218,25,33,.95);
+	background-color: rgba(218,25,33,.98);
 	font-size: 50px;
 	text-align: center;
 }
@@ -124,7 +119,7 @@ footer {
 	width: 100%;
 	z-index: 1;
 	position: absolute;
-	background-color: rgba(0, 115, 255,.95);
+	background-color: rgba(0, 115, 255,.98);
 	font-size: 50px;
 	text-align: center;
 }
@@ -140,11 +135,14 @@ footer {
 	display: none;
 }
 
-/*.restart {
-	height: 50px;
-}*/
+.restart p {
+	font-size: 40px;
+	text-align: center;
+	margin: 0 auto;
+	width: 28%;
+}
 
-.restart:hover {
+.restart p:hover {
 	border-bottom: 4px solid white;
 	font-size: 50px;
 }

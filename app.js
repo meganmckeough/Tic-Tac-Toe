@@ -3,7 +3,7 @@ var playerNetflix = document.querySelector('#p1');
 var playerStan = document.querySelector('#p2');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
-var restart = document.querySelector('.restart');
+var restart = document.querySelector('.restart p');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -172,52 +172,36 @@ function chooseSquare () {
 function checkForWin () {
 	if (square1.classList.contains('chosen-netflix') && square2.classList.contains('chosen-netflix') && square3.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square2.classList.contains('chosen-stan') && square3.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square4.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square4.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') === true) {
 		winScreenNetflix.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-		restart.classList.remove('hidden');
 	}
 }
 
