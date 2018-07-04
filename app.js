@@ -4,6 +4,7 @@ var playerStan = document.querySelector('#p2');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
 var restart = document.querySelector('.restart p');
+var squareImages = document.querySelectorAll('.square img');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -168,6 +169,21 @@ function chooseSquare () {
 	}
 };
 
+//to clear all squares to replay game
+function clearSquares () {
+	boardSquares.forEach(function(thisSquare) {
+		if (thisSquare.classList.contains('chosen-stan') === true) {
+			thisSquare.classList.remove('chosen-stan');
+		}
+		if (thisSquare.classList.contains('chosen-netflix') === true) {
+			thisSquare.classList.remove('chosen-netflix');
+		}	
+	});
+	squareImages.forEach(function(thisImage) {
+		thisImage.classList.add('hidden');			
+	});
+}
+
 //checking for one of eight win conditions, per player
 function checkForWin () {
 	if (square1.classList.contains('chosen-netflix') && square2.classList.contains('chosen-netflix') && square3.classList.contains('chosen-netflix') === true) {
@@ -205,13 +221,16 @@ function checkForWin () {
 	}
 }
 
-//need to take a look at this function 
+//need to take a look at this function - doesn't work for Stan
 function resetBoard () {
-	if (winScreenNetflix.classList.contains('.hidden') === false) {
-		winScreenNetflix.classList.add('hidden');
-	} else if (winScreenStan.classList.contains('.hidden') === false) {
+	if (winScreenStan.classList.contains('hidden') === false) {
 		winScreenStan.classList.add('hidden');
+		clearSquares();
 	}
+	if (winScreenNetflix.classList.contains('hidden') === false) {
+		winScreenNetflix.classList.add('hidden');
+		clearSquares();
+	} 
 };
 
 //event listener for each square on board
