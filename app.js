@@ -1,11 +1,12 @@
 var boardSquares = document.querySelectorAll('.square');
-var playerNetflix = document.querySelector('#p1');
-var playerStan = document.querySelector('#p2');
+var playerNetflix = document.querySelector('#netflix');
+var playerStan = document.querySelector('#stan');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
 var restartStan = document.querySelector('.win-screen-stan .restart p');
 var restartNetflix = document.querySelector('.win-screen-netflix .restart p');
 var squareImages = document.querySelectorAll('.square img');
+var draw = document.querySelector('.draw');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -48,27 +49,23 @@ function allocateFirstPlayer () {
 	}
 };
 
+//change player heading styles
 function changePlayerHeader () {
-	// if (winScreenNetflix.classList.contains("hidden") && winScreenStan.classList.contains("hidden") === false) {
-	// 	document.querySelector('.player-headings > div > h2').style.fontSize = '40px';
-	// 	document.querySelector('.player-headings > div > h2').style.borderBottom = 'none';
-	// } else {
-		if (playerNetflix.classList.contains('your-turn') === true) {
-			document.querySelector('.netflix').style.fontSize = '60px';
-			document.querySelector('.netflix').style.borderBottom = '5px solid #da1921';
-		} else {
-			document.querySelector('.netflix').style.fontSize = '40px';
-			document.querySelector('.netflix').style.borderBottom = 'none';
-		} 
-		if (playerStan.classList.contains('your-turn') === true) {
-			document.querySelector('.stan').style.fontSize = '60px';
-			document.querySelector('.stan').style.borderBottom = '5px solid #0073ff';	
-		} else {
-			document.querySelector('.stan').style.fontSize = '40px';
-			document.querySelector('.stan').style.borderBottom = 'none';
-		};		
-	}	
-// }
+	if (playerNetflix.classList.contains('your-turn') === true) {
+		document.querySelector('.netflix').style.fontSize = '60px';
+		document.querySelector('.netflix').style.borderBottom = '5px solid #da1921';
+	} else {
+		document.querySelector('.netflix').style.fontSize = '40px';
+		document.querySelector('.netflix').style.borderBottom = 'none';
+	} 
+	if (playerStan.classList.contains('your-turn') === true) {
+		document.querySelector('.stan').style.fontSize = '60px';
+		document.querySelector('.stan').style.borderBottom = '5px solid #0073ff';	
+	} else {
+		document.querySelector('.stan').style.fontSize = '40px';
+		document.querySelector('.stan').style.borderBottom = 'none';
+	};		
+}	
 
 allocateFirstPlayer();
 changePlayerHeader();
@@ -219,10 +216,10 @@ function checkForWin () {
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') === true) {
 		winScreenStan.classList.remove('hidden');
-	}
+	} 
 }
 
-//need to take a look at this function - doesn't work for Stan
+//to reset board items
 function resetBoard () {
 	if (winScreenStan.classList.contains('hidden') === false) {
 		winScreenStan.classList.add('hidden');
@@ -239,6 +236,6 @@ boardSquares.forEach(function(thisSquare) {
 	thisSquare.addEventListener('click', chooseSquare);
 });
 
-//event listener for restart
+//event listeners for restart
 restartStan.addEventListener('click', resetBoard);
 restartNetflix.addEventListener('click', resetBoard);

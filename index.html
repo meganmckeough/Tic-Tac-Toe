@@ -25,37 +25,73 @@
 	</main>
 
 	<header>
-		<h1><a href="http://www.netflix.com" target="_blank"><img src="images/netflix.png" alt="Netflix logo"></a> vs <a href="http://www.stan.com.au" target="_blank"><img src="images/stan.png" alt="Stan logo"></a></h1>
+		<h1>
+			<a href="http://www.netflix.com" target="_blank"><img src="images/netflix.png" alt="Netflix logo"></a> vs <a href="http://www.stan.com.au" target="_blank"><img src="images/stan.png" alt="Stan logo"></a>
+		</h1>
 		<h2>A Tic Tac Toe Battle of the Streaming Services</h2>
 	</header>
 
 	<section class="player-headings">
-		<div><h2 class="netflix">Player: Netflix</h2></div>
-		<div><h2 class="stan">Player: Stan</h2></div>
+		<div>
+			<h2 class="netflix">Player: Netflix</h2>
+		</div>
+<!-- 		<div class="draw hidden">
+			<p>>>> Draw! Play again <<<</p>
+		</div> -->
+		<div>
+			<h2 class="stan">Player: Stan</h2>
+		</div>
 	</section>
 
 	<main>
-		<div id="p1" class="player"></div>
+		<div id="netflix" class="player"></div>
 
 		<div class="game-board">
 			<div class="row">
-				<div class="square one"><img src="images/murderer.png" class="netflix hidden"><img src="images/better-call-saul.png" class="stan hidden"></div>
-				<div class="square two"><img src="images/OITNB.svg" class="netflix hidden"><img src="images/party-down.png" class="stan hidden"></div>
-				<div class="square three"><img src="images/sense8-2.png" class="netflix hidden"><img src="images/preacher.png" class="stan hidden"></div>
+				<div class="square one">
+					<img src="images/murderer.png" class="netflix hidden">
+					<img src="images/better-call-saul.png" class="stan hidden">
+				</div>
+				<div class="square two">
+					<img src="images/OITNB.svg" class="netflix hidden">
+					<img src="images/party-down.png" class="stan hidden">
+				</div>
+				<div class="square three">
+					<img src="images/sense8-2.png" class="netflix hidden">
+					<img src="images/preacher.png" class="stan hidden">
+				</div>
 			</div>
 			<div class="row">
-				<div class="square four"><img src="images/electric-dreams2.png" class="stan hidden"><img src="images/black-mirror.png" class="netflix hidden"></div>
-				<div class="square five"><img src="images/jessica-jones.png" class="hidden netflix"><img src="images/sherlock.jpg" class="stan hidden"></div>
-				<div class="square six"><img src="images/unreal.png" class="stan hidden"><img src="images/terrace-house.png" class="netflix hidden"></div>
+				<div class="square four">
+					<img src="images/electric-dreams2.png" class="stan hidden">
+					<img src="images/black-mirror.png" class="netflix hidden">
+				</div>
+				<div class="square five">
+					<img src="images/jessica-jones.png" class="hidden netflix">
+					<img src="images/sherlock.jpg" class="stan hidden">
+				</div>
+				<div class="square six">
+					<img src="images/unreal.png" class="stan hidden">
+					<img src="images/terrace-house.png" class="netflix hidden">
+				</div>
 			</div>
 			<div class="row">
-				<div class="square seven"><img src="images/bojack.png" class="netflix hidden"><img src="images/broad-city.png" class="stan hidden"></div>
-				<div class="square eight"><img src="images/twin-peaks.jpg" class="hidden stan"><img src="images/house-of-cards.png" class="netflix hidden"></div>
-				<div class="square nine"><img src="images/glow3.png" class="netflix hidden"><img src="images/FNL.png" class="stan hidden"></div>
+				<div class="square seven">
+					<img src="images/bojack.png" class="netflix hidden">
+					<img src="images/broad-city.png" class="stan hidden">
+				</div>
+				<div class="square eight">
+					<img src="images/twin-peaks.jpg" class="hidden stan">
+					<img src="images/house-of-cards.png" class="netflix hidden">
+				</div>
+				<div class="square nine">
+					<img src="images/glow3.png" class="netflix hidden">
+					<img src="images/FNL.png" class="stan hidden">
+				</div>
 			</div>
 		</div>
 
-		<div id="p2" class="player"></div>
+		<div id="stan" class="player"></div>
 	</main>
 
 	<footer>
