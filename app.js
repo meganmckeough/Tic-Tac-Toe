@@ -100,38 +100,47 @@ function selectedNetflix () {
 	if (event.target === square1) {
 		square1.classList.add('chosen-netflix');
 		square1ImgNetflix.classList.remove('hidden');
+		square1ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square2) {
 		square2.classList.add('chosen-netflix');
 		square2ImgNetflix.classList.remove('hidden');
+		square2ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square3) {
 		square3.classList.add('chosen-netflix');
 		square3ImgNetflix.classList.remove('hidden');
+		square3ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square4) {
 		square4.classList.add('chosen-netflix');
 		square4ImgNetflix.classList.remove('hidden');
+		square4ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square5) {
 		square5.classList.add('chosen-netflix');
 		square5ImgNetflix.classList.remove('hidden');
+		square5ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square6) {
 		square6.classList.add('chosen-netflix');
 		square6ImgNetflix.classList.remove('hidden');
+		square6ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square7) {
 		square7.classList.add('chosen-netflix');
 		square7ImgNetflix.classList.remove('hidden');
+		square7ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square8) {
 		square8.classList.add('chosen-netflix');
 		square8ImgNetflix.classList.remove('hidden');
+		square8ImgNetflix.classList.add('chosen');
 	}
 	if (event.target === square9) {
 		square9.classList.add('chosen-netflix');
 		square9ImgNetflix.classList.remove('hidden');
+		square9ImgNetflix.classList.add('chosen');
 	}
 };
 
@@ -140,57 +149,71 @@ function selectedStan () {
 	if (event.target === square1) {
 		square1.classList.add('chosen-stan');
 		square1ImgStan.classList.remove('hidden');
+		square1ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square2) {
 		square2.classList.add('chosen-stan');
 		square2ImgStan.classList.remove('hidden');
+		square2ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square3) {
 		square3.classList.add('chosen-stan');
 		square3ImgStan.classList.remove('hidden');
+		square3ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square4) {
 		square4.classList.add('chosen-stan');
 		square4ImgStan.classList.remove('hidden');
+		square4ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square5) {
 		square5.classList.add('chosen-stan');
 		square5ImgStan.classList.remove('hidden');
+		square5ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square6) {
 		square6.classList.add('chosen-stan');
 		square6ImgStan.classList.remove('hidden');
+		square6ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square7) {
 		square7.classList.add('chosen-stan');
 		square7ImgStan.classList.remove('hidden');
+		square7ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square8) {
 		square8.classList.add('chosen-stan');
 		square8ImgStan.classList.remove('hidden');
+		square8ImgStan.classList.add('chosen');
 	} 
 	if (event.target === square9) {
 		square9.classList.add('chosen-stan');
 		square9ImgStan.classList.remove('hidden');
+		square9ImgStan.classList.add('chosen');
 	} 
 };
 
 //to claim square for player, then changing the turn to other player
 function chooseSquare () {
-	if (playerNetflix.classList.contains('your-turn') === true) {
-		selectedNetflix();
-		checkForWin();
-		playerStan.classList.add('your-turn');	
-		playerStanTurn.textContent = "<< Your turn!";
-		playerNetflix.classList.remove('your-turn');
-		changePlayerHeader();
+	if (event.target.classList.contains('chosen-stan') === true || event.target.classList.contains('chosen-netflix') === true 
+		|| event.target.classList.contains('chosen')) {
+		return;
 	} else {
-		selectedStan();
-		checkForWin();
-		playerNetflix.classList.add('your-turn');	
-		playerNetflixTurn.textContent = "Your turn! >>";
-		playerStan.classList.remove('your-turn');
-		changePlayerHeader();
+		if (playerNetflix.classList.contains('your-turn') === true) {
+			selectedNetflix();
+			checkForWin();
+			playerStan.classList.add('your-turn');	
+			playerStanTurn.textContent = "<< Your turn!";
+			playerNetflix.classList.remove('your-turn');
+			changePlayerHeader();
+		} else {
+			selectedStan();
+			checkForWin();
+			playerNetflix.classList.add('your-turn');	
+			playerNetflixTurn.textContent = "Your turn! >>";
+			playerStan.classList.remove('your-turn');
+			changePlayerHeader();
+		}
 	}
 };
 
@@ -281,6 +304,7 @@ function checkForWin () {
 	}
 }
 
+//checking whether to show three wins screen
 function checkThreeWinsNetflix () {
 	if (winsNetflix === 2) {
 		threeWinsNetflix.classList.remove('hidden');
@@ -293,6 +317,7 @@ function checkThreeWinsStan () {
 	}
 }
 
+//to update counter after each win
 function addToCounter () {
 	winsStanCounter.textContent = winsStan;
 	winsNetflixCounter.textContent = winsNetflix;
@@ -340,7 +365,7 @@ selectService.forEach(function(thisSquare) {
 	thisSquare.addEventListener('click', startGame);
 });
 
-//event listeners for restart
+//event listeners for restart or refresh
 restartStan.addEventListener('click', resetBoard);
 restartNetflix.addEventListener('click', resetBoard);
 restartDraw.addEventListener('click', resetBoard);
