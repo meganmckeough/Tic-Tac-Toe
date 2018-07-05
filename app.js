@@ -12,7 +12,7 @@ var winsNetflixCounter = document.querySelector('.wins-netflix span');
 var winsStanCounter = document.querySelector('.wins-stan span');
 var selectService = document.querySelectorAll('.choose-service img');
 var selectScreen = document.querySelector('.choose-service');
-// var draw = document.querySelector('.draw');
+var drawScreen = document.querySelector('.draw-screen');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -207,38 +207,57 @@ function clearSquares () {
 //checking for one of eight win conditions, per player
 function checkForWin () {
 	if (square1.classList.contains('chosen-netflix') && square2.classList.contains('chosen-netflix') && square3.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square2.classList.contains('chosen-stan') && square3.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square4.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square4.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') === true) {
+		window.scrollTo(0, 0);
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') === true) {
+		window.scrollTo(0, 0);
 		winScreenStan.classList.remove('hidden');
-	} 
+	} else if (document.querySelectorAll('.chosen-stan').length + document.querySelectorAll('.chosen-netflix').length === 9) {
+		window.scrollTo(0, 0);
+		drawScreen.classList.remove('hidden');
+	};
 }
 
 function addToCounter () {
