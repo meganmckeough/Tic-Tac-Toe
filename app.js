@@ -251,6 +251,7 @@ function resetBoard () {
 		clearSquares();
 		winsStan++;
 		addToCounter();
+		changePlayerHeader();
 		playerNetflix.classList.remove('your-turn');
 		allocateFirstPlayer();
 	}
@@ -259,6 +260,7 @@ function resetBoard () {
 		clearSquares();
 		winsNetflix++
 		addToCounter();
+		changePlayerHeader();
 		playerStan.classList.remove('your-turn');
 		allocateFirstPlayer();
 	} 
