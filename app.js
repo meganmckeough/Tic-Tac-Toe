@@ -13,6 +13,7 @@ var winsStanCounter = document.querySelector('.wins-stan span');
 var selectService = document.querySelectorAll('.choose-service img');
 var selectScreen = document.querySelector('.choose-service');
 var drawScreen = document.querySelector('.draw-screen');
+var restartDraw = document.querySelector('.draw-screen .restart p');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -283,6 +284,18 @@ function resetBoard () {
 		playerStan.classList.remove('your-turn');
 		allocateFirstPlayer();
 	} 
+	if (drawScreen.classList.contains('hidden') === false) {
+		drawScreen.classList.add('hidden');
+		clearSquares();
+		addToCounter();
+		if (playerStan.classList.contains('your-turn')) {
+			playerStan.classList.remove('your-turn');
+		}
+		if (playerNetflix.classList.contains('your-turn')) {
+			playerNetflix.classList.remove('your-turn');
+		}
+		allocateFirstPlayer();
+	}
 };
 
 //event listener for each square on board
@@ -298,3 +311,4 @@ selectService.forEach(function(thisSquare) {
 //event listeners for restart
 restartStan.addEventListener('click', resetBoard);
 restartNetflix.addEventListener('click', resetBoard);
+restartDraw.addEventListener('click', resetBoard);
