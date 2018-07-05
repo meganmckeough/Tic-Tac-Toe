@@ -14,6 +14,8 @@ var selectService = document.querySelectorAll('.choose-service img');
 var selectScreen = document.querySelector('.choose-service');
 var drawScreen = document.querySelector('.draw-screen');
 var restartDraw = document.querySelector('.draw-screen .restart p');
+var threeWinsNetflix = document.querySelector('.three-wins-netflix');
+var threeWinsStan = document.querySelector('.three-wins-stan');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -209,57 +211,82 @@ function clearSquares () {
 function checkForWin () {
 	if (square1.classList.contains('chosen-netflix') && square2.classList.contains('chosen-netflix') && square3.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square2.classList.contains('chosen-stan') && square3.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square4.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square7.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square4.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square4.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square6.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square6.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square9.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square1.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square9.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square7.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square3.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square7.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-netflix') && square5.classList.contains('chosen-netflix') && square8.classList.contains('chosen-netflix') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenNetflix.classList.remove('hidden');
 	} else if (square2.classList.contains('chosen-stan') && square5.classList.contains('chosen-stan') && square8.classList.contains('chosen-stan') === true) {
 		window.scrollTo(0, 0);
+		checkForThreeWins();
 		winScreenStan.classList.remove('hidden');
 	} else if (document.querySelectorAll('.chosen-stan').length + document.querySelectorAll('.chosen-netflix').length === 9) {
 		window.scrollTo(0, 0);
 		drawScreen.classList.remove('hidden');
 	};
 }
+
+function checkForThreeWins () {
+	if (winsNetflix === 2) {
+		threeWinsNetflix.classList.remove('hidden');
+	}
+	if (winsStan === 2) {
+		threeWinsStan.classList.remove('hidden');
+	}
+};
 
 function addToCounter () {
 	winsStanCounter.textContent = winsStan;
