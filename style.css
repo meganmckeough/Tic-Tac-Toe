@@ -153,7 +153,9 @@ footer a:hover {
 .win-screen-netflix div, 
 .win-screen-stan div,
 .choose-service div,
-.draw-screen div {
+.draw-screen div,
+.three-wins-netflix div,
+.three-wins-stan div {
 	height: 100%;
 	width: 100%;
 	z-index: 1;
@@ -162,12 +164,26 @@ footer a:hover {
 	text-align: center;
 }
 
-.win-screen-netflix div {
+.win-screen-netflix div, 
+.three-wins-netflix div {
 	background-color: rgba(218,25,33,.98);
 }
 
-.win-screen-stan div {
+.win-screen-stan div,
+.three-wins-stan div {
 	background-color: rgba(0, 115, 255,.98);
+}
+
+.three-wins-netflix div, 
+.three-wins-stan div {
+	font-weight: 800;
+	font-size: 80px;
+}
+
+.three-wins-netflix img,
+.three-wins-stan img {
+	width: 10%;
+	height: auto;
 }
 
 .choose-service div {
