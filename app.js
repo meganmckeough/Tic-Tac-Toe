@@ -16,6 +16,8 @@ var drawScreen = document.querySelector('.draw-screen');
 var restartDraw = document.querySelector('.draw-screen .restart p');
 var threeWinsNetflix = document.querySelector('.three-wins-netflix');
 var threeWinsStan = document.querySelector('.three-wins-stan');
+var refreshStan = document.querySelector('.three-wins-stan .refresh');
+var refreshNetflix = document.querySelector('.three-wins-netflix .refresh');
 
 //targeting squares
 var square1 = document.querySelector('.one');
@@ -339,3 +341,9 @@ selectService.forEach(function(thisSquare) {
 restartStan.addEventListener('click', resetBoard);
 restartNetflix.addEventListener('click', resetBoard);
 restartDraw.addEventListener('click', resetBoard);
+refreshStan.addEventListener('click', function () {
+	location.reload();
+});
+refreshNetflix.addEventListener('click', function () {
+	location.reload();
+});

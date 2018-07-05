@@ -80,12 +80,12 @@ header img,
 
 footer {
 	text-align: center;
-	font-size: 30px;
 }
 
-footer a {
+a {
 	text-decoration: none;
 	color: white;
+	font-size: 30px;
 }
 
 footer a:hover {
@@ -178,12 +178,18 @@ footer a:hover {
 .three-wins-stan div {
 	font-weight: 800;
 	font-size: 80px;
+	padding-top: 50px;
 }
 
 .three-wins-netflix img,
 .three-wins-stan img {
 	width: 10%;
 	height: auto;
+}
+
+.three-wins-stan p,
+.three-wins-netflix p {
+	margin: 0;
 }
 
 .choose-service div {
@@ -227,6 +233,10 @@ footer a:hover {
 .draw p:hover {
 	border-bottom: 4px solid white;
 	font-size: 70px;
+}
+
+.purchase a:hover {
+	font-size: 50px;
 }
 
 .choose-service img:hover {
