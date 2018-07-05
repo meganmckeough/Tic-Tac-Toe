@@ -61,9 +61,11 @@ function allocateFirstPlayer () {
 	if (randomPlayer === 0) {
 		playerNetflix.classList.add('your-turn');
 		playerNetflixTurn.textContent = "Netflix goes first >>";
+		changePlayerHeader();
 	} else {
 		playerStan.classList.add('your-turn');
 		playerStanTurn.textContent = "<< Stan goes first";
+		changePlayerHeader();
 	}
 };
 
@@ -244,14 +246,13 @@ function addToCounter () {
 	winsNetflixCounter.textContent = winsNetflix;
 };
 
-//to reset board items
+//to reset board items and start next round
 function resetBoard () {
 	if (winScreenStan.classList.contains('hidden') === false) {
 		winScreenStan.classList.add('hidden');
 		clearSquares();
 		winsStan++;
 		addToCounter();
-		changePlayerHeader();
 		playerNetflix.classList.remove('your-turn');
 		allocateFirstPlayer();
 	}
@@ -260,7 +261,6 @@ function resetBoard () {
 		clearSquares();
 		winsNetflix++
 		addToCounter();
-		changePlayerHeader();
 		playerStan.classList.remove('your-turn');
 		allocateFirstPlayer();
 	} 
