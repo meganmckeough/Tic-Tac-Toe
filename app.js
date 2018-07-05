@@ -1,6 +1,8 @@
 var boardSquares = document.querySelectorAll('.square');
 var playerNetflix = document.querySelector('#player-netflix');
+var playerNetflixTurn = document.querySelector('#player-netflix p');
 var playerStan = document.querySelector('#player-stan');
+var playerStanTurn = document.querySelector('#player-stan p');
 var winScreenNetflix = document.querySelector('.win-screen-netflix');
 var winScreenStan = document.querySelector('.win-screen-stan');
 var restartStan = document.querySelector('.win-screen-stan .restart p');
@@ -58,8 +60,10 @@ function allocateFirstPlayer () {
 	var randomPlayer = Math.floor(Math.random() * Math.floor(2));
 	if (randomPlayer === 0) {
 		playerNetflix.classList.add('your-turn');
+		playerNetflixTurn.textContent = "Netflix goes first >>";
 	} else {
 		playerStan.classList.add('your-turn');
+		playerStanTurn.textContent = "<< Stan goes first";
 	}
 };
 
@@ -170,12 +174,14 @@ function chooseSquare () {
 		selectedNetflix();
 		checkForWin();
 		playerStan.classList.add('your-turn');	
+		playerStanTurn.textContent = "<< Your turn!";
 		playerNetflix.classList.remove('your-turn');
 		changePlayerHeader();
 	} else {
 		selectedStan();
 		checkForWin();
 		playerNetflix.classList.add('your-turn');	
+		playerNetflixTurn.textContent = "Your turn! >>";
 		playerStan.classList.remove('your-turn');
 		changePlayerHeader();
 	}
@@ -233,21 +239,28 @@ function checkForWin () {
 	} 
 }
 
+function addToCounter () {
+	winsStanCounter.textContent = winsStan;
+	winsNetflixCounter.textContent = winsNetflix;
+};
+
 //to reset board items
 function resetBoard () {
 	if (winScreenStan.classList.contains('hidden') === false) {
 		winScreenStan.classList.add('hidden');
 		clearSquares();
 		winsStan++;
-		winsStanCounter.textContent = winsStan;
-		winsNetflixCounter.textContent = winsNetflix;
+		addToCounter();
+		playerNetflix.classList.remove('your-turn');
+		allocateFirstPlayer();
 	}
 	if (winScreenNetflix.classList.contains('hidden') === false) {
 		winScreenNetflix.classList.add('hidden');
 		clearSquares();
 		winsNetflix++
-		winsStanCounter.textContent = winsStan;
-		winsNetflixCounter.textContent = winsNetflix;
+		addToCounter();
+		playerStan.classList.remove('your-turn');
+		allocateFirstPlayer();
 	} 
 };
 
