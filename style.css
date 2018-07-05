@@ -152,7 +152,8 @@ footer a:hover {
 
 .win-screen-netflix div, 
 .win-screen-stan div,
-.choose-service div {
+.choose-service div,
+.draw-screen div {
 	height: 100%;
 	width: 100%;
 	z-index: 1;
@@ -176,11 +177,23 @@ footer a:hover {
 	padding-top: 100px;
 }
 
+.draw-screen div {
+	background-color: #ff4f51;
+	color: black;
+	font-weight: 800;
+}
+
 .win-screen-stan img,
-.win-screen-netflix img {
+.win-screen-netflix img,
+.draw-screen .thrones {
 	width: 500px;
 	height: auto;
 	border: 3px solid white;
+}
+
+.foxtel-logo {
+	width: 150px;
+	height: auto;
 }
 
 .hidden {
@@ -209,11 +222,6 @@ footer a:hover {
 .wins-netflix span {
 	font-size: 70px;
 }
-
-/*.draw p {
-	font-size: 40px;
-	margin: 0 auto;
-}*/
 
 
 
